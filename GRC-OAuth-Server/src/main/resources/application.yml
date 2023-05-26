@@ -1,0 +1,95 @@
+spring:
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://192.168.1.80:5432/Chn_usermgmt
+#    username: postgres
+#    password: postgres123
+# JPA properties
+#  jpa:
+#    hibernate:
+#    ddl-auto: none
+#    show-sql: true    
+#    database: postgresql
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#    generate-ddl: true
+
+
+ 
+ datasource:
+    url: jdbc:oracle:thin:@//ewss2db-mum.csujspl2bezo.ap-south-1.rds.amazonaws.com:1521/ORCL
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    username: GRC_DEV
+    password: GRC_DEV
+
+ 
+  
+ jpa:
+   hibernate:
+    ddl-auto: update
+   show-sql: false
+
+application:
+    name: auth-service
+      
+server:
+  port: 9001
+  
+
+config:
+  oauth2:
+    clientid:  bctbfsi
+    clientSecret:  bctbfsi@123
+    accessTokenValidity: 10000
+    refreshTokenValidity: 1200000
+    privatekey:  -----BEGIN RSA PRIVATE KEY-----
+                   MIIEpAIBAAKCAQEArfOUEs2PcNuQuRmyki3KRYPZLcblZOWQbj0w7+cSsvaJBLR8
+                   bM4dOenCUPss37vFl/7Bm4PsiPQtrzBz5Bxf//J8IfzDu7u4f3L8QzCyHAp4CaKh
+                   UowX9T7dbdfXayuPvFT/fHgGiURFWeqaOqQqGUyJp3HYjdDtBp4HxPlcbAw8OM+n
+                   6mPwQTkU381Z/lq3o/WpTMiVbmgaha3tKrxo+BSXHYzN9aAcdcjxyv6dF0HI88Cv
+                   coV+A6++gzYdjWTz1mtl9lelmVbT+D8Erz57bR6SSuZCUoco+cgvxiKHw4u6W93n
+                   nQC7YsNPWcHO7MqOFilEzI0+ehKCLv3ebWVTAwIDAQABAoIBADKpYTPEuIUG/XRb
+                   Xp2iRmnOh58EcWTcUx84JRuJsfF7Sdab9iz+LpbiVNye+qfCmT62TI7NckNE0lVW
+                   iDokZXU2mx6O7jar6oT76SpscUMnbWRpABD5ijS79WN7XFrzGe6g1rPahRTPVF9m
+                   qzpu+2/Y0bJ5vrc25QFrXxnoAhnZT3kIDKN73VDOFXcakfo7JQDZE8Fro/ZOYc1o
+                   pV2/dNv7eujrTxEcu2gHvhNzzrbBjtvvos/QLdiPayouzE8ybJEwrk5AbfQa55qv
+                   yiLUn1Sn4RkDOtnT+BjXmyjr98W/aT2ssESc8uW5ELM7+jYUjbgXHHZQd8ABEDh/
+                   iGgPjKECgYEA0+B/WBlLUzUuW3X/M/co6YzcGCrB2WrquJxrv2Wl7bA3c1hvxRFB
+                   X4JMotC/KcrY+WbUZWZl3q7q+OT2fUitHmGK11MBw2R84dSR4rk2yJy0WCXQH6xc
+                   yiO/fDcwfPTTORl5hlMjgCKfZVJ+Raqi/u9HL+UvCDHanaQsnR1KGjECgYEA0i02
+                   jR37YJ2j4Bd+YnrYz71zgGNCHmuQeuap90iw/wYIJ4GzTlXM4tgONKxnk+H6ul2q
+                   OUoWnSluF5X8sTVMLTtLg20ga2gkS0GG189JBwoZKqsmsBuGeTh1C7Jdlf2NzOdF
+                   JMSw21gDvvGzgl0dyMoIQkxxnmUtjIKPCj9hv3MCgYAhDODwbimo1h/gFnzzrzdL
+                   jzR59Jl+f8YTfBr2pTWH6TgNHxt4QyPOcTXhI+zd6Q2FgfvZwWpcnS58GsM0cdTH
+                   a3HL+t/IifFNDOqg0kFwc7lSErvvZOSoh4EEMFu48jvMqWOih29/Omdg18hot6Br
+                   YgnZt8dpYNV4R7bJ31rC0QKBgQCT5Zb+hHuQyD06Aq4/1FxfCtyNGsu7Jkv7//bY
+                   eQF74523VzB6ziun8QtGC4+zY5CQtjqDp9vz6eR7mmK/vFaHebMwn4jxq83mWwzt
+                   LgMgff2ppdhKkoP1J0JN4cyzMEIpTxC7x+D/6JZyNhjwgl/kHC7loG9PW7lKp9DK
+                   EEHTewKBgQCMIcqyokvEyxkw77n2h5fffKj+8ViY4Qo7vF7MkfnkL7jmCKcKaXH3
+                   HDwNeWKl6OAm7DsKQRg4NZrHCSOaV4wOYajYP7SP8NU0l6S3ZTLSnx47bhXiz0uY
+                   uzjaQSi7UR7bVmPBxyaEU5DRBpSYjwKQSaAcRer8PDWBlaPpsH6jUg==
+                   -----END RSA PRIVATE KEY-----
+    publickey:  -----BEGIN PUBLIC KEY-----
+                  MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArfOUEs2PcNuQuRmyki3K
+                  RYPZLcblZOWQbj0w7+cSsvaJBLR8bM4dOenCUPss37vFl/7Bm4PsiPQtrzBz5Bxf
+                  //J8IfzDu7u4f3L8QzCyHAp4CaKhUowX9T7dbdfXayuPvFT/fHgGiURFWeqaOqQq
+                  GUyJp3HYjdDtBp4HxPlcbAw8OM+n6mPwQTkU381Z/lq3o/WpTMiVbmgaha3tKrxo
+                  +BSXHYzN9aAcdcjxyv6dF0HI88CvcoV+A6++gzYdjWTz1mtl9lelmVbT+D8Erz57
+                  bR6SSuZCUoco+cgvxiKHw4u6W93nnQC7YsNPWcHO7MqOFilEzI0+ehKCLv3ebWVT
+                  AwIDAQAB
+                  -----END PUBLIC KEY-----
+
+grc:
+  user:
+    allowed:
+      failedAttempts: 25
+
+logging:
+  level:
+    org.springframework: ERROR 
+    org.hibernate: ERROR
+    com.asymmetrix.grc.*: INFO
+  file:
+    name: GRCOauthServer.log
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm}- %msg%n"
+

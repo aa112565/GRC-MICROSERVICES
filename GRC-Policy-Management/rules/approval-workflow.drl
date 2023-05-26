@@ -1,0 +1,42 @@
+import com.asymmetrix.grc.Dto.OrderRequest;
+//import com.asymmetrix.grc.Dto.CustomerType; 
+import com.asymmetrix.grc.Dto.RatingColor;
+//import com.asymmetrix.grc.Dto.ResidualImpactType; 
+global com.asymmetrix.grc.Dto.PolicyScoringApprovalDTO policyScoringApprovalDTO;
+
+
+dialect "mvel" 
+ 
+rule "ResidualImpact type based approval - High and Very High rating"
+    when
+        OrderRequest( ratingColor.getValue == "RED" )
+    then         
+         policyScoringApprovalDTO.setRequiredApprovalLevel("BU");
+         policyScoringApprovalDTO.setLevelOneApprover("Supervisor");
+         policyScoringApprovalDTO.setLevelTwoApprover("VendorAdmin");
+         policyScoringApprovalDTO.setLevelThreeApprover("BU");   
+         
+         
+end
+     
+rule "ResidualImpact type based approval - Medium rating"
+    when
+        OrderRequest( ratingColor.getValue == "ORANGE" || ratingColor.getValue == "YELLOW" )
+    then     
+         policyScoringApprovalDTO.setRequiredApprovalLevel("VENDORADMIN");
+         policyScoringApprovalDTO.setLevelOneApprover("Supervisor");
+         policyScoringApprovalDTO.setLevelTwoApprover("NA");
+         policyScoringApprovalDTO.setLevelThreeApprover("VendorAdmin");
+        
+	end
+ 
+rule "ResidualImpact type based approval- Low and Very Low rating"
+    when
+       OrderRequest( ratingColor.getValue == "GREEN" )
+    then         
+         policyScoringApprovalDTO.setRequiredApprovalLevel("VENDORADMIN");
+         policyScoringApprovalDTO.setLevelOneApprover("Supervisor");
+         policyScoringApprovalDTO.setLevelTwoApprover("NA");
+         policyScoringApprovalDTO.setLevelThreeApprover("VendorAdmin");
+        
+	end

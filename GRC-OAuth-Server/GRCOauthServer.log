@@ -1,0 +1,35 @@
+2023-05-08 10:16- No active profile set, falling back to default profiles: default
+2023-05-08 10:16- Starting service [Tomcat]
+2023-05-08 10:16- Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-05-08 10:16- Initializing Spring embedded WebApplicationContext
+2023-05-08 10:16- HikariPool-1 - Starting...
+2023-05-08 10:16- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2023-05-08 10:17- HikariPool-1 - Start completed.
+2023-05-08 10:17- Started OauthServerApplication in 22.914 seconds (JVM running for 23.355)
+2023-05-08 10:25- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-08 10:25- DB Based authentication
+2023-05-08 10:25- LOGIN_SUCCESS
+2023-05-08 16:13- No active profile set, falling back to default profiles: default
+2023-05-08 16:13- Starting service [Tomcat]
+2023-05-08 16:13- Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-05-08 16:13- Initializing Spring embedded WebApplicationContext
+2023-05-08 16:13- HikariPool-1 - Starting...
+2023-05-08 16:13- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2023-05-08 16:13- HikariPool-1 - Start completed.
+2023-05-08 16:13- Started OauthServerApplication in 18.588 seconds (JVM running for 18.98)
+2023-05-08 16:14- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-08 16:14- Exception Token has expired
+2023-05-08 16:14- DB Based authentication
+2023-05-08 16:14- LOGIN_SUCCESS
+2023-05-08 20:47- No active profile set, falling back to default profiles: default
+2023-05-08 20:47- Starting service [Tomcat]
+2023-05-08 20:47- Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-05-08 20:47- Initializing Spring embedded WebApplicationContext
+2023-05-08 20:47- HikariPool-1 - Starting...
+2023-05-08 20:47- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2023-05-08 20:47- HikariPool-1 - Start completed.
+2023-05-08 20:48- Started OauthServerApplication in 16.789 seconds (JVM running for 17.265)
+2023-05-08 21:06- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-08 21:06- Exception Token has expired
+2023-05-08 21:06- DB Based authentication
+2023-05-08 21:06- LOGIN_SUCCESS

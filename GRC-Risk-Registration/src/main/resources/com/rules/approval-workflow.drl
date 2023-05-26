@@ -1,0 +1,41 @@
+import com.asymmetrix.grc.dto.OrderRequest;
+import com.asymmetrix.grc.dto.CustomerType; 
+import com.asymmetrix.grc.dto.RatingColor;
+import com.asymmetrix.grc.dto.ResidualImpactType; 
+global com.asymmetrix.grc.dto.RiskScoringApprovalDTO riskScoringApprovalDTO;
+ 
+dialect "mvel" 
+ 
+rule "ResidualImpact type based approval - High and Very High rating"
+    when
+        OrderRequest(residualImpactType.getValue == "VERYHIGH" || residualImpactType.getValue == "HIGH" || ratingColor.getValue == "RED")
+    then
+        System.out.println("==========ResidualImpact type based approval - High and Very High rating=============");        
+         riskScoringApprovalDTO.setRequiredApprovalLevel("BU");
+         riskScoringApprovalDTO.setLevelOneApprover("Supervisor");
+         riskScoringApprovalDTO.setLevelTwoApprover("Risk");
+         riskScoringApprovalDTO.setLevelThreeApprover("BU");
+         
+end
+     
+rule "ResidualImpact type based approval - Medium rating"
+    when
+        OrderRequest(residualImpactType.getValue == "MEDIUM" || ratingColor.getValue == "ORANGE" || ratingColor.getValue == "YELLOW")
+    then
+        System.out.println("==========ResidualImpact type based approval - Medium rating=============");    
+         riskScoringApprovalDTO.setRequiredApprovalLevel("RISK");
+         riskScoringApprovalDTO.setLevelOneApprover("Supervisor");
+         riskScoringApprovalDTO.setLevelTwoApprover("NA");
+         riskScoringApprovalDTO.setLevelThreeApprover("Risk");
+end
+ 
+rule "ResidualImpact type based approval- Low and Very Low rating"
+    when
+       OrderRequest(residualImpactType.getValue == "LOW" || residualImpactType.getValue == "VERYLOW" || ratingColor.getValue == "GREEN")
+    then
+        System.out.println("==========ResidualImpact type based approval- Low and Very Low rating=============");       
+         riskScoringApprovalDTO.setRequiredApprovalLevel("Risk");
+         riskScoringApprovalDTO.setLevelOneApprover("Supervisor");
+         riskScoringApprovalDTO.setLevelTwoApprover("NA");
+         riskScoringApprovalDTO.setLevelThreeApprover("Risk");
+end

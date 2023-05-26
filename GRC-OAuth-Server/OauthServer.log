@@ -1,0 +1,13 @@
+2021-03-15 16:37- No active profile set, falling back to default profiles: default
+2021-03-15 16:37- Starting service [Tomcat]
+2021-03-15 16:37- Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-15 16:37- Initializing Spring embedded WebApplicationContext
+2021-03-15 16:37- HikariPool-1 - Starting...
+2021-03-15 16:37- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-03-15 16:37- HikariPool-1 - Start completed.
+2021-03-15 16:37- Started OauthServerApplication in 10.427 seconds (JVM running for 10.754)
+2021-03-15 16:37- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-15 16:37- DB Based authentication
+2021-03-15 16:38- LOGIN_SUCCESS
+2021-03-15 16:38- Exception null
+2021-03-15 16:38- Exception Token was not recognised
